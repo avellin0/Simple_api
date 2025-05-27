@@ -11,12 +11,13 @@ export class GetUsers{
             
 
             const result = db.find((index) => index.id === id)
-
+        
             if(!result){
                 res.status(404).send("Usuario não encontrado")
+                throw new Error("Usuario não encontrado")
             }
 
-            res.send(result)
+            res.send(result.name)
 
         } catch (error) {
             console.log("this is the error", error);
