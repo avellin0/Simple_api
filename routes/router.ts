@@ -1,15 +1,15 @@
 import { Router } from "express";
 import {CreateHello} from "../controller/CreateHello"
-// import { GetCongrats } from "controller/GetCongrats";
+import { GetUsers } from "controller/GetUsers";
 
 const route = Router()
 
 const hello = new CreateHello()
-// const congrats = new GetCongrats()
+const user = new GetUsers()
 
 
 route.get('/', hello.handle)
-// route.get('/get', congrats.handle)
+route.post('/GetUser', user.handle)
 
 
 
