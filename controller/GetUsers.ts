@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { db } from "db/database";
+import { db } from "../db/database";
 
 export class GetUsers{
     async handle(req: Request, res: Response) {

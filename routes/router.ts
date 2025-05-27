@@ -1,6 +1,6 @@
 import { Router } from "express";
 import {CreateHello} from "../controller/CreateHello"
-import { GetUsers } from "controller/GetUsers";
+import { GetUsers } from "../controller/GetUsers";
 
 const route = Router()
 
